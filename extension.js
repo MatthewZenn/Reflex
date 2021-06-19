@@ -1,6 +1,7 @@
 const vscode = require('vscode');
 const fs = require('fs');
 const path = require('path');
+const { exec } = require('child_process');
 
 
 /**
@@ -10,13 +11,15 @@ function activate(context) {
 
 	let disposable = vscode.commands.registerCommand('reflex.helloWorld', function () {
 
-		if (!vscode.workspace) {
-			return vscode.window.showErrorMessage('No HTML File Found');
-		}
+		vscode.window.showInformationMessage('Starting Reflector Server...');
+		exec('echo "hello there"', (err, stdout, stderr) => {
+			console.log('stdout: ' + stdout);
+			console.log('stderr: ' + stderr);
+			if (err) {
+				console.log('error: ' + err);
+			}
+		});
 
-		else {
-			vscode.window.showInformationMessage('Starting Reflector Server...');
-		}
 	});
 
 	context.subscriptions.push(disposable);
