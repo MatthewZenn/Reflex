@@ -1,0 +1,1 @@
+exports.reflectorInstallLocation = "C:/ProgramFiles/Refelctor/Reflector.exe"

@@ -1,20 +1,19 @@
 const vscode = require('vscode');
 const fs = require('fs');
-const path = require('path');
 const { exec } = require('child_process');
+const panther = require("./modules/panther.js");
 
 
 /**
  * @param {vscode.ExtensionContext} context
  */
 function activate(context) {
-
+	let path = vscode.window.activeTextEditor.document.uri.fsPath;
 	let disposable = vscode.commands.registerCommand('reflex.helloWorld', function () {
 
 		vscode.window.showInformationMessage('Starting Reflector Server...');
-		exec('echo "hello there"', (err, stdout, stderr) => {
-			console.log('stdout: ' + stdout);
-			console.log('stderr: ' + stderr);
+		exec((panther.reflectorInstallLocation + ' ' + path), (err) => {
+			console.log('Reflector-Server started at http://localhost:8080');
 			if (err) {
 				console.log('error: ' + err);
 			}
