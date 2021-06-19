@@ -1,1 +1,1 @@
-exports.reflectorInstallLocation = "C:/ProgramFiles/Refelctor/Reflector.exe"
+exports.reflectorInstallLocation = "C:\ProgramFiles\Refelctor\Reflector.exe"

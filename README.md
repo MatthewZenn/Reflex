@@ -3,3 +3,6 @@
 # Reflex
 
 VSCode extension for testing games built with Reflector
+
+By default, Reflector installs to ```C:\Program Files\Reflector```
+However, if you have installed it elsewhere, you must update the Panther configuration file, located in ```Reflex\modules\panther.js```
