@@ -7,3 +7,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [Unreleased]
 
 - Initial release
+
+## [Changes]
+
+## [Added]
+
+- set up statusBar button
+- imported modules

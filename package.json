@@ -10,7 +10,7 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:reflex.helloWorld"
+        "*"
 	],
 	"main": "./extension.js",
 	"contributes": {
