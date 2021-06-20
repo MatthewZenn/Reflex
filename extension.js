@@ -12,10 +12,10 @@ function activate(context) {
 	let disposable = vscode.commands.registerCommand('reflex.helloWorld', function () {
 
 		vscode.window.showInformationMessage('Starting Reflector Server...');
+		console.log('Reflector-Server started at http://localhost:8080');
 		exec((panther.reflectorInstallLocation + ' ' + path), (err) => {
-			console.log('Reflector-Server started at http://localhost:8080');
 			if (err) {
-				console.log('error: ' + err);
+				console.log(err);
 			}
 		});
 
