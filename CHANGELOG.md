@@ -11,10 +11,11 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [Changes]
 
 - Changed logo
+- Fixed a bug with the console log
 
 ## [Added]
 
-- set up statusBar button
-- imported modules
+- Set up statusBar button
+- Imported modules
 - Added code for running the server
 - Added engine path module
